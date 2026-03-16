@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Internship Opportunity Aggregator</title>
+
+<style>
+
+body{
+font-family: Arial;
+background:#f2f2f2;
+text-align:center;
+}
+
+h1{
+color:darkblue;
+}
+
+.container{
+width:80%;
+margin:auto;
+}
+
+.card{
+background:white;
+padding:15px;
+margin:15px;
+border-radius:8px;
+box-shadow:0 0 10px gray;
+}
+
+button{
+background:blue;
+color:white;
+padding:8px 15px;
+border:none;
+border-radius:5px;
+cursor:pointer;
+}
+
+button:hover{
+background:darkblue;
+}
+
+</style>
+</head>
+
+<body>
+
+<h1>Internship Opportunity Aggregator</h1>
+
+<div class="container" id="internships"></div>
+
+<script>
+
+const internships = [
+
+{
+title:"Software Developer Intern",
+company:"TechCorp",
+location:"Hyderabad",
+duration:"3 Months",
+link:"https://internshala.com"
+},
+
+{
+title:"AI / ML Intern",
+company:"AI Labs",
+location:"Bangalore",
+duration:"6 Months",
+link:"https://internshala.com"
+},
+
+{
+title:"Web Development Intern",
+company:"CodeSoft",
+location:"Remote",
+duration:"2 Months",
+link:"https://internshala.com"
+},
+
+{
+title:"Data Analyst Intern",
+company:"DataInsights",
+location:"Mumbai",
+duration:"4 Months",
+link:"https://internshala.com"
+},
+
+{
+title:"Python Developer Intern",
+company:"DevTech",
+location:"Chennai",
+duration:"3 Months",
+link:"https://internshala.com"
+},
+
+{
+title:"Full Stack Developer Intern",
+company:"NextGen Solutions",
+location:"Pune",
+duration:"6 Months",
+link:"https://internshala.com"
+},
+
+{
+title:"Cyber Security Intern",
+company:"SecureNet",
+location:"Delhi",
+duration:"4 Months",
+link:"https://internshala.com"
+},
+
+{
+title:"Cloud Computing Intern",
+company:"CloudX",
+location:"Remote",
+duration:"3 Months",
+link:"https://internshala.com"
+},
+
+{
+title:"Mobile App Development Intern",
+company:"AppWorks",
+location:"Bangalore",
+duration:"2 Months",
+link:"https://internshala.com"
+},
+
+{
+title:"UI/UX Design Intern",
+company:"Creative Minds",
+location:"Hyderabad",
+duration:"3 Months",
+link:"https://internshala.com"
+}
+
+];
+
+let container=document.getElementById("internships");
+
+internships.forEach(i=>{
+
+container.innerHTML += `
+
+<div class="card">
+
+<h2>${i.title}</h2>
+<p><b>Company:</b> ${i.company}</p>
+<p><b>Location:</b> ${i.location}</p>
+<p><b>Duration:</b> ${i.duration}</p>
+
+<a href="${i.link}" target="_blank">
+<button>Apply</button>
+</a>
+
+</div>
+
+`;
+
+});
+
+</script>
+
+</body>
+</html>
